@@ -1,12 +1,13 @@
 {
   "name": "language-graphql",
   "version": "0.0.0",
-  "description": "A short description of your language package",
+  "description": "Syntax highlighting for GraphQL queries",
   "keywords": [
     "language",
-    "grammar"
+    "grammar",
+    "graphql"
   ],
-  "repository": "https://github.com/atom/language-graphql",
+  "repository": "https://github.com/rmosolgo/language-graphql",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

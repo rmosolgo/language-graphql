@@ -1,3 +1,11 @@
-# PackageName language package
+# language-graphql
 
-A short description of your language package.
+Atom syntax highlighting for GraphQL.
+
+## Todo
+
+- Autocompletion based on a JSON or pretty-printed schema.
+
+## License
+
+MIT
