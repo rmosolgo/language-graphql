@@ -43,7 +43,16 @@
   "string":
     'name': 'string.quoted.double'
     'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin'
     'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end'
+    'patterns': [
+      {'include': '#escaped_char'}
+    ]
   "variable":
     'name': 'constant.other.symbol'
     'match': '\\$[_A-Za-z][_0-9A-Za-z]*'
@@ -122,3 +131,6 @@
   "builtInField":
     'match': '__schema|__typename|__type'
     'name': 'keyword.other.graphql'
+  'escaped_char':
+    'match': '\\\\(?:u[\\da-fA-f]{4}|.)'
+    'name': 'constant.character.escape.graphql'

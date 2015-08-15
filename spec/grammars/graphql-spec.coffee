@@ -9,6 +9,9 @@ makeNestedTokens = (nestedScopes...) ->
     allScopes = nestedScopes.concat(scopes)
     makeTokenWithScopes(value, allScopes...)
 
+logTokens = (tokens) ->
+  for t, idx in tokens
+    console.log("#{idx}: #{t.value} (#{t.scopes.join(", ")})")
 
 
 describe "GraphQL grammar", ->
@@ -68,6 +71,13 @@ describe "GraphQL grammar", ->
 
   it "tokenizes unnamed queries", ->
     tokens = getTokens("{ __schema { types { name }}}")
-    console.log("#{idx}: #{t.value} (#{t.scopes.join(", ")})") for t, idx in tokens
     makeToken = makeNestedTokens("meta.selections")
     expect(tokens[2]).toEqual makeToken("__schema", "keyword.other.graphql")
+
+  it "tokenizes strings with escaped characters", ->
+    tokens = getTokens('{ field(str: "my\\"Str\\u0025")}')
+    makeToken = makeNestedTokens("meta.selections", "meta.arguments", "string.quoted.double")
+    expect(tokens[6]).toEqual makeToken('my')
+    expect(tokens[7]).toEqual makeToken('\\"', 'constant.character.escape.graphql')
+    expect(tokens[8]).toEqual makeToken('Str')
+    expect(tokens[9]).toEqual makeToken('\\u0025', 'constant.character.escape.graphql')
