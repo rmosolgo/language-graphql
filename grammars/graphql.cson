@@ -51,7 +51,7 @@
       '0':
         'name': 'punctuation.definition.string.end'
     'patterns': [
-      {'include': '#escaped_char'}
+      {'include': '#escapedChar'}
     ]
   "variable":
     'name': 'constant.other.symbol'
@@ -117,6 +117,7 @@
       '0':
         'name': 'meta.brace.curly.graphql'
     'patterns' : [
+      {'include': '#fieldAlias'}
       {'include': '#inlineFragment'}
       {'include': '#fragmentSpread'}
       {'include': '#directive'}
@@ -131,6 +132,9 @@
   "builtInField":
     'match': '__schema|__typename|__type'
     'name': 'keyword.other.graphql'
-  'escaped_char':
+  'escapedChar':
     'match': '\\\\(?:u[\\da-fA-f]{4}|.)'
     'name': 'constant.character.escape.graphql'
+  'fieldAlias':
+    'match': '[_A-Za-z][_0-9A-Za-z]*:'
+    'name': 'variable.other.alias.graphql'

@@ -81,3 +81,8 @@ describe "GraphQL grammar", ->
     expect(tokens[7]).toEqual makeToken('\\"', 'constant.character.escape.graphql')
     expect(tokens[8]).toEqual makeToken('Str')
     expect(tokens[9]).toEqual makeToken('\\u0025', 'constant.character.escape.graphql')
+
+  it "tokenizes field aliases", ->
+    tokens = getTokens('{ myAlias: field}')
+    makeToken = makeNestedTokens("meta.selections")
+    expect(tokens[2]).toEqual makeToken("myAlias:", "variable.other.alias.graphql")
