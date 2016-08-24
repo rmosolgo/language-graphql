@@ -28,7 +28,7 @@
   {
     'name': 'meta.operation'
     'comment': 'an operation definition'
-    'match': '(query|mutation)\\s*([_A-Za-z][_0-9A-Za-z]*)'
+    'match': '(query|mutation|subscription)\\s*([_A-Za-z][_0-9A-Za-z]*)'
     'captures':
       '1':
         'name': 'storage.type'
