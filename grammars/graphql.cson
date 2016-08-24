@@ -72,12 +72,16 @@
     'name': 'support.constant.enum'
     'match': "[_A-Za-z][_0-9A-Za-z]*"
   "fragmentSpread" :
-    'match': '(\\.\\.\\.)\\s*([_A-Za-z][_0-9A-Za-z]*)\\s*(on)?'
+    'match': '(\\.\\.\\.)\\s*([_A-Za-z][_0-9A-Za-z]*)\\s*(on\\s*)?([_A-Za-z][_0-9A-Za-z]*)?'
     'captures':
       '1':
         'name': 'keyword.operator'
       '2':
         'name': 'variable.other'
+      '3':
+        'name': 'keyword.operator'
+      '4':
+        'name': 'support.constant'
   "inlineFragment" :
     'match': '(\\.\\.\\.)\\s*(on)\\s*([_A-Za-z][_0-9A-Za-z]*)'
     'captures':
