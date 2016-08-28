@@ -11,7 +11,7 @@ Atom syntax highlighting for GraphQL.
 
 ## Development
 
-- Run tests: `apm spec`
+- Run tests: `apm test`
 - Open with grammar reloading:
   - Add the project to Atom's packages `apm link .`
   - Open the project in development mode `atom --dev .`
