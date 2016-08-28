@@ -11,6 +11,10 @@
 'foldingStopMarker': '\}\)\]'
 'patterns': [
   {"include" : "#comment"}
+  {"include" : "#typeDef"}
+  {"include" : "#typeDefImplements"}
+  {"include" : "#unionOptions"}
+  {"include" : "#directive"}
   {
     'name': 'meta.fragment'
     'comment': 'a fragment definintion'
@@ -23,7 +27,7 @@
       '3':
         'name': 'keyword.operator'
       '4':
-        'name': 'support.constant'
+        'name': 'support.class'
   }
   {
     'name': 'meta.operation'
@@ -53,9 +57,16 @@
     'patterns': [
       {'include': '#escapedChar'}
     ]
-  "variable":
-    'name': 'constant.other.symbol'
+  "variableDefinition":
+    'match': '(\\$[_A-Za-z][_0-9A-Za-z]*)\\:\\s*([_A-Za-z][_0-9A-Za-z]*)'
+    "captures":
+      "1":
+        "name": "constant.other.symbol"
+      "2":
+        "name": "support.class"
+  "variableUsage":
     'match': '\\$[_A-Za-z][_0-9A-Za-z]*'
+    "name": "constant.other.symbol"
   "boolean":
     'name': 'constant.language.boolean'
     'match': 'true|false'
@@ -66,11 +77,11 @@
     'name': 'storage.modifier'
     'match': '@[_A-Za-z][_0-9A-Za-z]+'
   "argument":
-    'name': 'variable.parameter'
+    "name": "variable.parameter"
     'match': '[_A-Za-z][_0-9A-Za-z]*:'
   "enum":
+    'match': "([A-Z][A-Z_]+)"
     'name': 'support.constant.enum'
-    'match': "[_A-Za-z][_0-9A-Za-z]*"
   "fragmentSpread" :
     'match': '(\\.\\.\\.)\\s*([_A-Za-z][_0-9A-Za-z]*)\\s*(on\\s*)?([_A-Za-z][_0-9A-Za-z]*)?'
     'captures':
@@ -81,7 +92,7 @@
       '3':
         'name': 'keyword.operator'
       '4':
-        'name': 'support.constant'
+        'name': 'support.class'
   "inlineFragment" :
     'match': '(\\.\\.\\.)\\s*(on)\\s*([_A-Za-z][_0-9A-Za-z]*)'
     'captures':
@@ -90,7 +101,7 @@
       '2':
         'name': 'keyword.operator'
       '3':
-        'name': 'support.constant'
+        'name': 'support.class'
   "arguments":
     'name': 'meta.arguments'
     'begin': '\\('
@@ -105,9 +116,11 @@
       {'include': '#argument'}
       {'include': '#string'}
       {'include': '#boolean'}
-      {'include': '#variable'}
+      {'include': '#variableDefinition'}
+      {'include': '#variableUsage'}
       {'include': '#number'}
       {'include': '#enum'}
+      {'include': '#directive'}
       {'include': '#comment'}
     ]
   'selections':
@@ -129,6 +142,7 @@
       {'include': '#comment'}
       {'include': '#selections'}
       {'include': '#builtInField'}
+      {'include': '#enum'}
     ]
   "comment":
     'name': 'comment.line.number-sign.graphql'
@@ -142,3 +156,24 @@
   'fieldAlias':
     'match': '[_A-Za-z][_0-9A-Za-z]*:'
     'name': 'variable.other.alias.graphql'
+  'typeDef':
+    'match': '(type|interface|union|scalar|enum|input|directive|extend|schema)\\s+([_A-Za-z][_0-9A-Za-z]*)?'
+    "captures":
+      "1":
+        "name": "keyword.operator"
+      "2":
+        "name": "support.class"
+  'typeDefImplements':
+    'match': '(implements)\\s+([_A-Za-z][_0-9A-Za-z,\\s]*)'
+    "captures":
+      "1":
+        "name": "keyword.operator"
+      "2":
+        "name": "support.class"
+  'unionOptions':
+    "match": "(=|\\||on)\\s+([_A-Za-z][_0-9A-Za-z]*)"
+    "captures":
+      "1":
+        "name": "keyword.operator"
+      "2":
+        "name": "support.class"

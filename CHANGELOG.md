@@ -1,3 +1,8 @@
+## 0.3.0
+
+* Improve support for schema language
+* Improve directive highlights
+
 ## 0.2.0
 
 * Fix escaped characters in strings

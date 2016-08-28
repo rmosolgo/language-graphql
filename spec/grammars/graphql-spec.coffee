@@ -38,7 +38,7 @@ describe "GraphQL grammar", ->
     expect(tokens[0]).toEqual makeFragmentToken("fragment", "storage.type")
     expect(tokens[2]).toEqual makeFragmentToken("myFragment", "variable.other")
     expect(tokens[4]).toEqual makeFragmentToken("on", "keyword.operator")
-    expect(tokens[6]).toEqual makeFragmentToken("User", "support.constant")
+    expect(tokens[6]).toEqual makeFragmentToken("User", "support.class")
 
   it "tokenizes operation definitions", ->
     tokens = getTokens('mutation wreckStuff')
@@ -66,7 +66,7 @@ describe "GraphQL grammar", ->
     expect(tokens[9]).toEqual makeToken("...", 'keyword.operator')
     expect(tokens[11]).toEqual makeToken("myFields", 'variable.other')
     expect(tokens[15]).toEqual makeToken("on", 'keyword.operator')
-    expect(tokens[17]).toEqual makeToken("User", 'support.constant')
+    expect(tokens[17]).toEqual makeToken("User", 'support.class')
     expect(tokens[20]).toEqual makeToken(" name ", "meta.selections")
 
   it "tokenizes unnamed queries", ->

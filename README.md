@@ -7,6 +7,15 @@ Atom syntax highlighting for GraphQL.
 ## Todo
 
 - Autocompletion based on a JSON or pretty-printed schema.
+- How to highlight schema definition language?
+
+## Development
+
+- Run tests: `apm spec`
+- Open with grammar reloading:
+  - Add the project to Atom's packages `apm link .`
+  - Open the project in development mode `atom --dev .`
+  - Create a `scratch.graphql` file to check highlighting
 
 ## License
 
