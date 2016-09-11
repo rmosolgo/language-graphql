@@ -1,3 +1,7 @@
+## 0.4.0
+
+* Fix `cmd + /` comments to use `#`
+
 ## 0.3.0
 
 * Improve support for schema language
