@@ -3,4 +3,4 @@
 
 '.source.graphql':
   'editor':
-    'commentStart': '@@ '
+    'commentStart': '# '
