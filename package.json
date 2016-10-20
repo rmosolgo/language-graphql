@@ -1,5 +1,5 @@
 {
-  "name": "atom-language-graphql",
+  "name": "language-graphql",
   "version": "0.6.0",
   "description": "Syntax highlighting for GraphQL queries",
   "keywords": [

@@ -1,3 +1,11 @@
+## 0.6.0, 0.7.0
+
+* Fix publishing on APM
+
+## 0.5.0
+
+* Add LICENSE to repo
+
 ## 0.4.0
 
 * Fix `cmd + /` comments to use `#`
