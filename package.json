@@ -1,6 +1,6 @@
 {
   "name": "language-graphql",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Syntax highlighting for GraphQL queries",
   "keywords": [
     "language",
