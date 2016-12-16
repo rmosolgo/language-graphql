@@ -1,4 +1,4 @@
-# language-graphql [![Build Status](https://travis-ci.org/rmosolgo/language-graphql.svg?branch=master)](https://travis-ci.org/rmosolgo/language-graphql)
+# language-graphql [![Build Status](https://travis-ci.org/rmosolgo/language-graphql.svg?branch=master)](https://travis-ci.org/rmosolgo/language-graphql)  [![Version](https://img.shields.io/apm/v/language-graphql.svg)](https://atom.io/packages/language-graphql)
 
 Atom syntax highlighting for GraphQL, ported from [language-babel](https://github.com/gandm/language-babel).
 
