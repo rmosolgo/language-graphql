@@ -4,6 +4,7 @@
   "foldingStartMarker": "(/\\*|{|\\()",
   "foldingEndMarker": "(\\*/|\\}|\\))",
   "fileTypes": [
+    "graphqls",
     "graphql",
     "gql"
   ],
