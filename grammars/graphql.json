@@ -6,7 +6,8 @@
   "fileTypes": [
     "graphqls",
     "graphql",
-    "gql"
+    "gql",
+    "graphcool"
   ],
   "patterns": [
     { "include": "#graphql" }
