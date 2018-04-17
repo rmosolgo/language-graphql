@@ -80,6 +80,7 @@
           }
         },
         { "include": "#graphql-comment" },
+        { "include": "#graphql-directive" },
         { "include": "#graphql-type-object" }
       ]
     },
@@ -110,6 +111,7 @@
         "5": { "name": "punctuation.comma.graphql" }
       },
       "patterns": [
+        { "include": "#graphql-directive" },
         { "include": "#graphql-comment" },
         { "include": "#graphql-variable-definitions" },
         { "include": "#graphql-type-object" },
@@ -152,6 +154,7 @@
                 },
                 { "include": "#graphql-colon" },
                 { "include": "#graphql-comment" },
+                { "include": "#graphql-directive" },
                 { "include": "#graphql-skip-newlines" }
               ]
             },
