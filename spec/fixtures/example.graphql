@@ -171,6 +171,19 @@
   scalar Date
 ##^^^^^^       keyword.scalar.graphql
 ##       ^^^^  entity.scalar.graphql
+  """
+##^^^ punctuation.definition.string.begin.graphql
+##^^^ string.quoted.block.graphql
+  Type Description
+##^^^^ ^^^^^^^^^^^  string.quoted.block.graphql
+  """
+##^^^ punctuation.definition.string.end.graphql
+##^^^ string.quoted.block.graphql
+
+  "Inline type description"
+##^                         punctuation.definition.string.begin.graphql
+## ^^^^^^ ^^^^ ^^^^^^^^^^^  string.quoted.double.graphql
+##                        ^ punctuation.definition.string.end.graphql
   union SearchResult = Human # maybe spans
 ##^^^^^                                     keyword.union.graphql
 ##      ^^^^^^^^^^^^   ^^^^^                support.type.graphql
@@ -296,6 +309,17 @@
 ##  ^^^^^^^^^^^    entity.name.function.directive.graphql
 ##              ^  meta.arguments.graphql
 ##              ^  meta.brace.round.directive.graphql
+      blockString: """
+##    ^^^^^^^^^^^       variable.arguments.graphql
+##               ^      punctuation.colon.graphql
+##                 ^^^  string.quoted.block.graphql
+##                 ^^^  punctuation.definition.string.begin.graphql
+        String stuff goes here
+##      ^^^^^^ ^^^^^ ^^^^ ^^^^  string.quoted.block.graphql
+      """
+##    ^^^  string.quoted.block.graphql
+##    ^^^  punctuation.definition.string.end.graphql
+
       number: 1
 ##    ^^^^^^^ ^  meta.arguments.graphql
 ##    ^^^^^^     variable.arguments.graphql

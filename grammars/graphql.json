@@ -21,7 +21,10 @@
         { "include": "#graphql-union" },
         { "include": "#graphql-schema" },
         { "include": "#graphql-operation-def" },
-        { "include": "#graphql-comment" }
+        { "include": "#graphql-comment" },
+        { "include": "#graphql-directive" },
+        { "include": "#graphql-blockstring-value"},
+        { "include": "#graphql-string-value"}
       ]
     },
     "graphql-operation-def": {
@@ -409,6 +412,22 @@
         "1": { "name": "constant.boolean.graphql" }
       }
     },
+    "graphql-blockstring-value": {
+      "contentName": "string.quoted.block.graphql",
+      "begin": "\\s*+((\"\"\"))",
+      "end": "\\s*+(?:((\"\"\")))",
+      "beginCaptures": {
+        "1": { "name": "string.quoted.block.graphql" },
+        "2": { "name": "punctuation.definition.string.begin.graphql" }
+      },
+      "endCaptures": {
+        "1": { "name": "string.quoted.block.graphql" },
+        "2": { "name": "punctuation.definition.string.end.graphql" }
+      },
+      "patterns": [
+        { "include": "#graphql-string-content" }
+      ]
+    },
     "graphql-string-value": {
       "contentName": "string.quoted.double.graphql",
       "begin": "\\s*+((\"))",
@@ -473,6 +492,7 @@
         { "include":  "#graphql-variable-name" },
         { "include":  "#graphql-float-value" },
         { "include":  "#graphql-int-value" },
+        { "include":  "#graphql-blockstring-value" },
         { "include":  "#graphql-string-value" },
         { "include":  "#graphql-boolean-value" },
         { "include":  "#graphql-enum-value" },
