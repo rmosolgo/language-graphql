@@ -72,10 +72,11 @@
       },
       "patterns": [
         {
-          "match": "\\s*\\b(implements)\\b\\s*([_A-Za-z][_0-9A-Za-z]*)",
+          "match": "\\s*(?:\\b(implements)\\b|(&))\\s*([_A-Za-z][_0-9A-Za-z]*)",
           "captures": {
-            "1": { "name": "keyword.implements.grapahql" },
-            "2": { "name": "support.type.graphql" }
+            "1": { "name": "keyword.implements.graphql" },
+            "2": { "name": "keyword.implements.graphql" },
+            "3": { "name": "support.type.graphql" }
           }
         },
         { "include": "#graphql-comment" },

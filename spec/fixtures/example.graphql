@@ -74,13 +74,13 @@
    }
 ## ^  punctuation.operation.graphql
 
-  type Starship  implements Character {
-##^^^^ ^^^^^^^^  ^^^^^^^^^^ ^^^^^^^^^ ^  meta.type.interface.graphql
-##^^^^                                   keyword.type.graphql
-##     ^^^^^^^^             ^^^^^^^^^    support.type.graphql
-##               ^^^^^^^^^^              keyword.implements.grapahql
-##                                    ^  meta.type.object.graphql
-##                                    ^  punctuation.operation.graphql
+  type Starship  implements Character & Other {
+##^^^^ ^^^^^^^^  ^^^^^^^^^^ ^^^^^^^^^         ^  meta.type.interface.graphql
+##^^^^                                           keyword.type.graphql
+##     ^^^^^^^^             ^^^^^^^^^   ^^^^^    support.type.graphql
+##               ^^^^^^^^^^           ^          keyword.implements.graphql
+##                                            ^  meta.type.object.graphql
+##                                            ^  punctuation.operation.graphql
     id: ID!
 ##  ^^^ ^^^  meta.type.interface.graphql
 ##  ^^^ ^^^  meta.type.object.graphql
