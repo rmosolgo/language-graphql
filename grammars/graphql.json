@@ -159,6 +159,7 @@
             { "include": "#graphql-skip-newlines" }
           ]
         },
+        { "include": "#graphql-directive" },
         { "include": "#graphql-comment" },
         { "include": "#graphql-skip-newlines" }
       ]

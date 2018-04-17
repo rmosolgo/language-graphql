@@ -74,6 +74,14 @@
    }
 ## ^  punctuation.operation.graphql
 
+  schema @dir(ok: true) {
+##^^^^^^                  keyword.schema.graphql
+##        ^^^             entity.name.function.directive.graphql
+##            ^^^ ^^^^    meta.arguments.graphql
+##           ^        ^   meta.brace.round.directive.graphql
+##                      ^ punctuation.operation.graphql
+  }
+
   type Starship  implements Character & Other {
 ##^^^^ ^^^^^^^^  ^^^^^^^^^^ ^^^^^^^^^         ^  meta.type.interface.graphql
 ##^^^^                                           keyword.type.graphql
