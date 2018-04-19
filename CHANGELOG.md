@@ -1,3 +1,19 @@
+# Changelog
+
+## 0.10.0
+
+* Support leading strings and block strings
+* Support directives in SDL
+* Support `implements ... & ...`
+
+## 0.9.0
+
+* Support `.graphqls` extension
+
+## 0.8.0
+
+* Extract grammar from `language-babel`
+
 ## 0.6.0, 0.7.0
 
 * Fix publishing on APM
