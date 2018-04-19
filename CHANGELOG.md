@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.1
+
+* Re-release with proper changelog
+
 ## 0.10.0
 
 * Support leading strings and block strings
