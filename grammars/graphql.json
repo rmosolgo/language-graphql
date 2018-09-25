@@ -4,6 +4,7 @@
   "foldingStartMarker": "(/\\*|{|\\()",
   "foldingEndMarker": "(\\*/|\\}|\\))",
   "fileTypes": [
+    "prisma",
     "graphqls",
     "graphql",
     "gql"
