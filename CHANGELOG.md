@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.11.0
+
+* Support `.prisma` files
+
 ## 0.10.1
 
 * Re-release with proper changelog
