@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0
+
+* Support SDL descriptions as strings or block strings
+
 ## 0.11.0
 
 * Support `.prisma` files
