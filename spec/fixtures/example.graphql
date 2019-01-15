@@ -75,7 +75,6 @@
 ##           ^^^^^^           support.type.graphql
    }
 ## ^  punctuation.operation.graphql
-
   schema @dir(ok: true) {
 ##^^^^^^                  keyword.schema.graphql
 ##        ^^^             entity.name.function.directive.graphql
@@ -169,6 +168,13 @@
 ##  ^^^^^^^  meta.enum.graphql
 ##  ^^^^^^^  meta.type.object.graphql
 ##  ^^^^^^^  constant.character.enum.graphql
+    """
+##  ^^^ punctuation.definition.string.begin.graphql
+    Enum value description
+##  ^^^^ ^^^^^ ^^^^^^^^^^^  string.quoted.block.graphql
+    """
+##  ^^^ punctuation.definition.string.end.graphql
+
     EMPIRE
 ##  ^^^^^^  meta.enum.graphql
 ##  ^^^^^^  meta.type.object.graphql
@@ -182,6 +188,24 @@
 ## ^  meta.type.object.graphql
 ## ^  punctuation.operation.graphql
 
+  type Thing {
+    "Field documentation"
+##  ^                     punctuation.definition.string.begin.graphql
+##   ^^^^^ ^^^^^^^^^^^^^  string.quoted.double.graphql
+##                      ^ punctuation.definition.string.end.graphql
+    someField: SomeReturnType
+    anotherField(
+      """
+##    ^^^ punctuation.definition.string.begin.graphql
+##    ^^^ string.quoted.block.graphql
+      Argument documentation
+##    ^^^^^^^^ ^^^^^^^^^^^^^ string.quoted.block.graphql
+      """
+##    ^^^ punctuation.definition.string.end.graphql
+##    ^^^ string.quoted.block.graphql
+      argument: Int
+      ): SomeReturnType
+  }
   scalar Date @dir(x: Y)
 ##^^^^^^                keyword.scalar.graphql
 ##       ^^^^           entity.scalar.graphql
