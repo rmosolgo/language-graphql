@@ -119,7 +119,8 @@
         { "include": "#graphql-variable-definitions" },
         { "include": "#graphql-type-object" },
         { "include": "#graphql-colon"},
-        { "include": "#graphql-input-types"}
+        { "include": "#graphql-input-types"},
+        { "include": "#graphql-string-value"}
       ]
     },
     "graphql-schema": {
@@ -207,7 +208,8 @@
         { "include": "#graphql-colon" },
         { "include": "#graphql-input-types"},
         { "include": "#graphql-variable-assignment"},
-        { "include": "#graphql-skip-newlines" }
+        { "include": "#graphql-skip-newlines" },
+        { "include": "#graphql-string-value"}
       ]
     },
     "graphql-input-types": {
